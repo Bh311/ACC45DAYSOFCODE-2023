@@ -1,0 +1,16 @@
+#include <iostream>
+using namespace std;
+int main() {
+	int T,X,Y,Z,S;
+	cin>>T;
+	while(T>0)
+	{
+	    cin>>X;
+	    cin>>Y;
+	    cin>>Z;
+	    S=(5X+10Y)/Z;
+	    cout<<S<<endl;
+	    T--;   
+	}
+	return 0;
+}
