@@ -1,0 +1,32 @@
+#include <iostream>
+using namespace std;
+
+int main() 
+{
+    int T,B,N;
+    cin>>T;
+    while(T>0)
+    {
+        cin>>N>>B;
+        int Wi,Hi,Pi,are=0;
+        for(int i=1;i<=N;i++)
+        {
+            cin>>Wi>>Hi>>Pi;
+            if(B>=Pi)
+            {
+                if((Wi*Hi)>=are)
+                {
+                    are=Wi*Hi;
+                }
+            } 
+        }
+        if(are==0)
+            {
+                cout<<"no tablet"<<endl;
+            }else{
+                cout<<are<<endl;
+            }
+            T--;
+    }
+    return 0;
+}
