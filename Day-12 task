@@ -1,0 +1,44 @@
+#include <iostream>
+#include <math.h>
+using namespace std;
+
+int main() {
+    int T;
+    cin>>T;
+    while(T>0)
+    {
+        int A,B,count_A=0,count_B=0;
+        cin>>A>>B;
+        int a=A,b=B;
+        for(int i=1;i<=a;i=i+2)
+        {
+            A=A-i;
+            if(A<0)
+            {
+                break;
+            }
+            count_A+=1;
+        }
+        for(int j=2;j<=b;j+=2)
+        {
+            B=B-j;
+            if(B<0)
+            {
+                break;
+            }
+            count_B+=1;
+        }
+        if((count_A==count_B))
+        {
+            cout<<"Bob"<<endl;
+        }else if((count_B-count_A)>=1)
+        {
+            cout<<"Bob"<<endl;
+        }
+        else{
+            cout<<"Limak"<<endl;
+        }
+        T--;
+    }
+	return 0;
+}
