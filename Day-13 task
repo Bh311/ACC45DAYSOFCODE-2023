@@ -1,0 +1,27 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+      int T,N,A,B,count=0;
+      cin>>T;
+      while(T>0)
+      {
+          count=0;
+          cin>>N;
+          for(int i=0;i<N;i++)
+          {
+              A=N-i;
+            for(int i=N-1;i>=0;i--)
+            {
+              B=N-i;
+             if((A+B)%2!=0 )
+              {
+                 count++;
+              }
+            }
+          }
+          cout<<count<<endl;
+          T--;
+      }
+	return 0;
+}
