@@ -1,0 +1,21 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+	int T,x,y,z;
+	cin>>T;
+	while(T>0)
+	{
+	    cin>>x>>y>>z;
+	    if(x+z==y || y+x==z || y+z==x)
+	    {
+	        cout<<"yes"<<endl;
+	    }
+	    else
+	    {
+	        cout<<"no"<<endl;
+	    }
+	    T--;
+	}
+	return 0;
+}
