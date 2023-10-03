@@ -1,0 +1,24 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+	int T,N;
+	cin>>T;
+	while(T>0)
+	{
+	    cin>>N;
+	    int x,y,z;
+	  x=N-2;
+	  y=(N-2)/2;
+	  z=(N-2)/2;
+	  if(x+y+z==N)
+	  {
+	      cout<<x<<" "<<y<<" "<<z<<endl;
+	  }
+	  else{
+	      cout<<N-2<<" "<<1<<" "<<1<<endl;
+	  }
+	    T--;
+	}
+	return 0;
+}
