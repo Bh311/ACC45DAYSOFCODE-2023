@@ -1,0 +1,31 @@
+#include <iostream>
+using namespace std;
+void isprime(int m1,int n1)
+{
+    int flag=0,i,j;
+	    for( int i=m1;i<=n1;i++)
+	    {
+	           if (i == 1 || i == 0)
+            continue;
+        flag = 1;
+        for (j = 2; j <= i / 2; ++j) {
+            if (i % j == 0) {
+                flag = 0;
+                break;
+            }
+        }
+        if (flag == 1){
+            cout<<i<<endl;
+    }
+    }
+}
+int main() {
+	int T,m,n;
+	cin>>T;
+	for(int i=0;i<T;i++)
+	{ 
+	    cin>>m>>n;
+	    isprime(m,n);
+	}
+	return 0;
+}
