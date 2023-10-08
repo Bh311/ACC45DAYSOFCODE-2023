@@ -1,0 +1,57 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+	int T,x,a,b,c;
+	cin>>T;
+	while(T>0)
+	{
+	    cin>>x>>a>>b>>c;
+	    for(int i=1;i<=x;i++)
+	    {
+	        if(a>b && a>c)
+	        {
+	            if(b>c)
+	            {
+	                cout<<b+c+c<<endl;
+	            }
+	            else
+	            {
+	            cout<<b+b+c<<endl;
+	            }
+	            break;
+	        }
+	        else if(a<b && b>c)
+	        {
+	             if(a>c)
+	            {
+	                cout<<a+c+c<<endl;
+	            }
+	            else
+	            {
+	            cout<<a+a+c<<endl;
+	            }
+	            break;
+	        }
+	        else if(a==b && b==c)
+	        {
+	             cout<<b+c<<endl;
+	              break;
+	        }
+	        else
+	        {
+	             if(b<a)
+	            {
+	                cout<<a+a+b<<endl;
+	            }
+	            else
+	            {
+	            cout<<a+b+b<<endl;
+	            }
+	            break;
+	        }
+	    }
+	    T--;
+	}
+	return 0;
+}
