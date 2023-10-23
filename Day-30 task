@@ -1,0 +1,34 @@
+#include <iostream>
+
+using namespace std;
+
+int main() {
+    int T;
+    cin >> T;
+
+    while (T--) {
+        int R1, W1, C1, R2, W2, C2;
+        cin >> R1 >> W1 >> C1;
+        cin >> R2 >> W2 >> C2;
+
+        int playerA_stats = 0;
+        int playerB_stats = 0;
+
+        if (R1 > R2) playerA_stats++;
+        else playerB_stats++;
+
+        if (W1 > W2) playerA_stats++;
+        else playerB_stats++;
+
+        if (C1 > C2) playerA_stats++;
+        else playerB_stats++;
+
+        if (playerA_stats > playerB_stats) {
+            cout << "A" << endl;
+        } else {
+            cout << "B" << endl;
+        }
+    }
+
+    return 0;
+}
