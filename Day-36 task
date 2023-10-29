@@ -1,0 +1,31 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+    int t;
+    cin >> t;
+    while (t--) {
+        int n, k;
+        cin >> n >> k;
+        int a[n];
+        
+        for (int i = 0; i < n; i++) {
+            cin >> a[i];
+        }
+
+        int maxGirls = 0;
+        int currentSum = 0;
+        for (int i = 0; i < k; i++) {
+            currentSum += a[i];
+        }
+
+        maxGirls = currentSum;
+        for (int i = k; i < n; i++) {
+            currentSum += a[i] - a[i - k];
+            maxGirls = max(maxGirls, currentSum);
+        }
+
+        cout << maxGirls << endl;
+    }
+    return 0;
+}
