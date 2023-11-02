@@ -1,0 +1,37 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+	int t,x1,x2;
+	cin>>t;
+	while(t>0)
+	{
+	    cin>>x1>>x2;
+	    if(x1==x2)
+	    {
+	        cout<<"YES"<<endl;
+	    }
+	    else if(x1<x2)
+	    {
+	        cout<<"NO"<<endl;
+	    }
+	    else
+	    {
+	        while(x1>0)
+	        {
+	            if(x1==x2)
+	            {
+	                cout<<"YES"<<endl;
+	                break;
+	            }
+	            else
+	            {
+	            x1=x1+1;
+	            x2=x2+2;
+	            }
+	        }
+	    }
+	    t--;
+	}
+	return 0;
+}
