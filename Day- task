@@ -1,0 +1,22 @@
+#include <bits/stdc++.h>
+using namespace std;
+
+
+int main() {
+    int t;
+    cin>>t;
+    while(t--){
+        int maxt,maxn, sumN;
+        cin>>maxt>>maxn>>sumN;
+        int count = 0, add = 0, diff = 0, ans = 0;
+        for(int i =0; i<maxt; i++){
+            diff = sumN-add;
+            add+=min(maxn,diff);
+            ans += pow(min(maxn,diff),2);
+        }
+        cout<<ans<<endl;
+        
+    }
+
+    return 0;
+}
