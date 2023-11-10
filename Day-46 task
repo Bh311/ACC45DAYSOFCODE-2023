@@ -1,0 +1,24 @@
+#include<iostream>
+using namespace std;
+int main()
+{
+    int t,n;
+    cin>>t;
+    while(t>0)
+    {
+        cin>>n;
+        int count=0;
+        for(int i=0;i<n;i++)
+        {
+            int sq=i*i;
+            if(sq>n)
+            {
+                int d=n-(sq-1);
+                n=d;
+                count++;
+            }
+        }
+        cout<<count<<endl;
+        t--;
+    }
+}
